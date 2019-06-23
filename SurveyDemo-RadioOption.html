@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<style type="text/css">
+
+.row 
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.QuestionHeader 
+{
+    background-color: #91d1e4;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.QuestionStyle 
+{
+    background-color: #dceafb; 
+    
+    margin-left:25px; 
+    margin-top:15px;
+    margin-bottom:15px; 
+    margin-right:0px;
+
+    padding: 20px;
+    
+    border-radius: 10px;
+    font-size:24px;
+}
+
+.fa 
+{
+    opacity: 0.85;
+}
+
+.fa-icon-innter-text 
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+    vertical-align: middle;
+}
+
+    </style>
+  </head>
+  <body>
+    <div>
+        
+    <div class="table table-responsive">
+        <div class="row" style="width:100%;">                  
+            <div class="column col-lg-12 col-md-12 col-sm-12 col-xs-12 QuestionStyle">
+                    <div class="QuestionHeader">
+                      1.  What day is it today?
+                    </div>
+                    <div>
+                        <i id="singleChoice1" class="Question1 fa fa-check-circle-o" >
+                            <span class="fa-icon-innter-text"> Monday</span></i>
+                    </div>
+                    <div>
+                        <i id="singleChoice2" class="Question1 fa fa-check-circle-o">
+                            <span class="fa-icon-innter-text"> Tuesday</span></i>
+                    </div>
+                    <div>
+                        <i id="singleChoice3" class="Question1 fa fa-check-circle-o">
+                            <span class="fa-icon-innter-text"> Wednesday</span></i>
+                    </div>
+                    <div>
+                        <i id="singleChoice4" class="Question1 fa fa-check-circle-o">
+                            <span class="fa-icon-innter-text"> Thursday</span></i>
+                    </div>
+                    <div>
+                        <i id="singleChoice5" class="Question1 fa fa-check-circle-o">
+                            <span class="fa-icon-innter-text"> Friday</span></i>
+                    </div>
+                    <div>
+                        <i id="singleChoice6" class="Question1 fa fa-check-circle-o">
+                            <span class="fa-icon-innter-text"> Saturday</span></i>
+                    </div>
+                    <div>
+                        <i id="singleChoice7" class="Question1 fa fa-check-circle-o">
+                            <span class="fa-icon-innter-text"> Sunday</span></i>
+                    </div>        
+            </div>
+        </div>        
+            </div>
+    </div>
+    <script >
+            $(document).ready(function(){
+
+                $('.Question1').click(function() {
+                    var questionid = $(this).attr('id').substring(12);
+                    //alert(questionid);
+                
+                   $(".Question1").each(function() {
+                    $(this).removeClass('fa fa-check-circle');
+                    $(this).addClass('fa fa-check-circle-o');
+                    });
+
+                    //alert($('#singleChoice'+questionid).html());
+                    $('#singleChoice'+questionid).toggleClass('fa fa-check-circle-o fa fa-check-circle');
+                }); 
+
+              });
+    </script>
+  </body>
+</html>
